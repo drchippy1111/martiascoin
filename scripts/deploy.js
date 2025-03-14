@@ -1,8 +1,8 @@
 const { ethers } = require("hardhat");
 
-async function main() {
-    const initialSupply = ethers.utils.parseEther("100000000"); // 100,000,000 tokens
-    const Token = await ethers.getContractFactory("MyToken");
+    async function main() {
+    const initialSupply = ethers.utils.parseEther("100000000"); // 1000,000,000 tokens
+    const Token = await ethers.getContractFactory("MartiasCoin");
     const token = await Token.deploy(initialSupply);
 
     await token.deployed();
